@@ -1,0 +1,54 @@
+// COLOR VARIABLES
+$primaryColor:rgb(190, 0, 0);
+$secondaryColor: rgb(252, 255, 66);
+$charcoal:#232224;
+$lightGrey:#bcbdba;
+$black: black;
+$white: #F7F2E0;
+
+// FONT VARIABLES
+
+@font-face {
+    font-family: 'Osaka-Sans Serif';
+    src: url('fonts/Osaka-SansSerif.eot');
+    src: url('fonts/Osaka-SansSerif.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Osaka-SansSerif.woff') format('woff'),
+        url('fonts/Osaka-SansSerif.ttf') format('truetype'),
+        url('fonts/Osaka-SansSerif.svg#Osaka-SansSerif') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$primaryFont: 'Osaka-Sans Serif';
+$secondaryFont: 'VT323', monospace;
+$font: 'Cutive Mono', monospace;
+
+// MIXINS
+
+@mixin flex {
+	display:flex;
+}
+
+@mixin centerMost {
+		@include flex;
+		justify-content:center;
+		align-items: center;
+}
+
+
+// MIXIN w/ARG
+
+@mixin flexDirect($direction) {
+	@include flex;
+	flex-direction: $direction;
+}
+
+@mixin flexWrapper {
+	@include flexDirect(column);
+	width: 80%;
+	margin: 0 auto;
+}
+
+h1 {
+	font-family: $primaryFont;
+}

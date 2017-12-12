@@ -1,0 +1,176 @@
+html {
+	background: $primaryColor;
+	color: $secondaryColor;
+}
+
+ul {
+	list-style: none;
+	margin:0;
+	padding:0;
+	li {
+		margin:0;
+		padding:0;
+	}
+}
+
+h1, h2, h3, h4, p {
+	padding: 0;
+	margin:0;
+}
+
+h1 {
+	font-size: 3rem;
+	letter-spacing: 2px;
+	text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.8em;
+}
+
+.reloadMsg {
+	@include flexDirect(column);
+	@include centerMost;
+	justify-content: center;
+	button {
+		color: $white;
+		width: 200px;
+		border:none;
+		background: transparent;
+		@include flexDirect(column);
+		align-items: center;
+	}
+}
+
+img.catIcon {
+	width: 100%;
+	margin: 20px;
+}
+
+.displayNone, .window.displayNone, .reloadMsg.displayNone {
+	display: none;
+}
+
+.message {
+	height: 25vh;
+}
+
+
+header {
+	margin: 45px auto;
+	text-align: center;
+}
+
+section, form {
+	font-size: 1.5em;
+}
+
+.window {
+	@include flexWrapper;
+	margin: 0 auto;
+	border: 2px solid $lightGrey;
+	height: 70vh;
+	border-radius: 5px;
+	background-color: $charcoal;
+	color: $lightGrey;
+	font-family: $secondaryFont;
+	box-shadow: 1px 1px 10px rgba(0,0,0,0.6);
+	overflow: hidden;
+}
+
+.windowHeader {
+	@include flex;
+	justify-content: space-between;
+	background-color: $lightGrey;
+	color: $charcoal;
+	height: 40px;
+	padding: 5px;
+	.navTitle {
+		@include centerMost;
+		padding-left: 5px;
+		color: $charcoal;
+		font-size: 1.3em;
+	}
+	ul {
+		@include flex;
+		justify-content: space-around;
+		li {
+			@include centerMost;
+			padding: 5px 8px;
+			margin: 0 3px;
+			box-shadow: -1px -1px 1px 1px rgba(255,255,255,0.5),1px 1px 1px 1px rgba(0,0,0,0.5);
+			font-size: 0.75em;
+			&:hover {
+				background-color: rgba(128, 128, 128, 0.445);
+				color: rgba(255, 255, 255, 0.486);
+			}
+		}
+	}
+}
+
+.windowPane {
+	@extend .window;
+	@include flexDirect(column);
+	justify-content: space-between;
+	padding: 20px;
+	margin:0;
+	border-radius:0;
+	border:0;
+	width: 100%;
+	border-bottom: 2px solid grey;
+	text-align: center;
+	height: inherit;
+	overflow: hidden;
+}
+
+
+.windowMinimize {
+	@extend .window;
+	height: 30px;
+	overflow:hidden;
+	position: absolute;
+	bottom:  20px;
+	left: 20px;
+}
+
+.error {
+	color: $primaryColor;
+	font-size: 1.2em;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	.loader {
+		@include centerMost;
+		text-align:center;
+		margin: 20px auto;
+		padding-top: 10px;
+		align-self: center;
+
+	}
+	ul {
+		@include flexDirect(column);
+		justify-content: center;
+		width:100%;
+		li {
+			margin: 10px auto;
+		}
+	}
+}
+
+input[type=radio] {
+	margin-right: 10px;
+}
+
+form ul li {
+	@include centerMost;
+	margin: 20px 0px;
+}
+
+// whatever height + width of window is current --> add class mini, make height + width of window 0 (add css transition)

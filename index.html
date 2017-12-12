@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Lucky Cat Message Generator</title>
+	<link href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323" rel="stylesheet">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+	<header>
+		<h1>Lucky Cat Message Generator</h1>
+	</header>
+
+	<main class="window">
+		<nav class="windowHeader">
+			<p class="navTitle">C:>//run_luckyCatMsgGen.exe</p>
+			<ul class="navButtons">
+				<li class="icon minimize"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+</li>
+				<li class="icon expand"><i class="fa fa-window-maximize" aria-hidden="true"></i>
+</li>
+				<li class="icon close"><i class="fa fa-window-close-o" aria-hidden="true"></i>
+</li>
+			</ul>
+		</nav>
+		<div id="windowPane" class="windowPane">
+			<h2></h2>
+			<section>
+				<div class="cat"></div>
+				<div class="result">
+					<div class="loader"></div>
+					<ul class="message typeIt">
+						<li class="messageText"></li>
+						<li class="signOff"></li>
+						<li class="author"></li>
+					</ul>
+				</div>
+			</section>
+			<form action="">
+				<ul>
+					<li>
+						<input type="radio" name="howLucky" id="noLuck" value="noLuck">
+						<label for="noLuck">Feeline meown on my luck today :(</label>
+					</li>
+					<li>
+						<input type="radio" name="howLucky" id="medLuck" value="medLuck">
+						<label for="medLuck">Mehhhhhow :|</label>
+					</li>
+					<li>
+						<input type="radio" name="howLucky" id="bestLuck" value="bestLuck">
+						<label for="bestLuck">I'm purrfectly lucky :3</label>
+						</li>
+					
+					<br>
+					
+				</ul>
+				<input type="submit" value="Tell me my furrtune!" class="submitBtn">
+			</form>
+		</div>
+	</main> 
+<!-- WINDOW END -->
+
+<!-- RELOAD MSG BEHIND WINDOW -->
+	
+	<div class="reloadMsg displayNone">
+		<button class="reload">
+			<img class="catIcon" src="images/pixel-cat_icon.png" alt="lucky cat message gen icon">
+			_luckyCatMsgGen.exe</button>
+	</div>
+
+
+
+<!-- SCRIPTS -->
+	<script src="https://use.fontawesome.com/a024ed12a1.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+	<script src="scripts/luckygen.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	
+</body>
+</html>
